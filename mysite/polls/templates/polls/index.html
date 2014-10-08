@@ -1,7 +1,11 @@
+{% load staticfiles %}
+<script src="{% static "polls/jquery-2.1.1.min.js" %}"></script>
+<script src="{% static "polls/knockout-3.2.0.js" %}"></script>
+
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">"{{ question.question_text }}</a></li>
+        <li><a href="{% url 'polls:detail' question.id %}">"{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
