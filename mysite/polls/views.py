@@ -1,8 +1,9 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
+from django.http import JsonResponse
 
 from polls.models import Question, Choice
 
@@ -43,3 +44,10 @@ def vote(request, question_id):
 		selected_choice.votes += 1
 		selected_choice.save()
 		return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
+
+def fetest(request):    
+    return render(request, 'polls/fe_test.html')
+
+def fetestpost(request):
+    p = get_object_or_404(Question, pk=1)
+    return HttpResponse("This text retrieved from a view with AJAX")

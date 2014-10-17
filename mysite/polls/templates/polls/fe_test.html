@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> {% load staticfiles %}    
+    <script src="{% static "polls/jquery-2.1.1.min.js" %}"></script>
+    <script src="{% static "polls/knockout-3.2.0.js" %}"></script>
+    <script src="{% static "polls/bootstrap.min.js" %}"></script>
+    <script src="{% static "polls/jquery.avgrund.min.js" %}"></script>
+    <script src="{% static "polls/toastr.min.js" %}"></script>
+    <script src="{% static "polls/myjquery.js" %}"></script>
+    <script src="{% static "polls/moment.min.js" %}"></script>
+    <script src="{% static "polls/jquery.tooltipster.min.js" %}"></script>
+
+    <link rel="stylesheet" href="{% static "polls/avgrund.css" %}" />
+    <link rel="stylesheet" href="{% static "polls/bootstrap.min.css" %}" />
+    <link rel="stylesheet" href="{% static "polls/toastr.min.css" %}" />
+    <link rel="stylesheet" href="{% static "polls/tooltipster.css" %}" />  
+</head>
+<body>
+    <h1>Standard JQuery</h1>
+    <h3>Toggle Visibility</h3>
+ 	<p>        
+ 		<button id="ptagtoggle">Toggle</button>
+   	    <span id="invisip">This text will disappear</span>
+   	</p>    	
+    <h3>Toggle Fade</h3>
+   	<p>
+   		<button id="fancy">Toggle</button> 
+    	<strong id="fancytext">Fade out... and in</strong>
+    </p>
+    <h3>Animate</h3>
+    <p>
+    	<button id="doscience">Animate</button>
+    	<span id="toofar">This will slide down</span>    	
+    </p>    
+    <p>
+    	<button id="moveleft">&lt;--</button>
+    	<button id="moveright">--&gt;</button>
+    	<span id="canteven" style="position:relative;top:0px;">This can move left and right</span>
+    </p>
+    <h3>AJAX</h3>
+    <p>
+    	<button id="ajaxify">Ajaxify</button>
+    	<span id="blankajax"></span>
+    </p>
+    <h1>JQuery Plugins</h1>
+    <h3>Avgrund</h3>
+    <p>
+        <a href="#" id="avgrundbutton" class="btn btn-primary">Intensify fanciness</a>
+    </p>
+    <h3>Toastr</h3>
+    <p>
+        <a href="#" id="toastrinfo" class="btn">Info Toast</a>
+        <a href="#" id="toastrwarning" class="btn">Warning Toast</a>
+        <a href="#" id="toastrsuccess" class="btn">Success Toast</a>
+        <a href="#" id="toastrerror" class="btn">Error Toast</a>
+    </p>
+    <h3>moment.js</h3>
+    <p>
+        <div id="moment1"></div>
+        <div id="moment2"></div>
+        <div id="moment3"></div>
+        <div id="moment4"></div>
+        <div id="moment5"></div>
+        <div id="moment6"></div>
+    </p>
+    <h3>Tooltipster</h3>
+    <p>
+        <div id="tt1" class="tt" title="This is a tooltip" style="width:100px;">Tooltip</div>
+        <div id="tt2" class="tt" title="So is this..." style="width:100px;">Another tooltip</div>
+        <div id="tt3" class="tt" title="...and this" style="width:100px;">And another</div>
+    </p>
+</body>
+</html>
